@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 56 189 248;
+    --color-secondary: 16 185 129;
+    --color-accent: 236 72 153;
+    --color-background: 255 255 255;
+    --color-surface: 248 250 252;
+    --color-text: 30 41 59;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply bg-sky-400 text-white hover:bg-sky-500 focus:ring-sky-500;
+  }
+  
+  .btn-secondary {
+    @apply bg-white text-slate-700 border border-slate-300 hover:bg-slate-50 focus:ring-slate-500;
+  }
+  
+  .btn-danger {
+    @apply bg-red-500 text-white hover:bg-red-600 focus:ring-red-500;
+  }
+
+  .input {
+    @apply px-3 py-2 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent box-border;
+  }
+
+  .card {
+    @apply bg-white rounded-xl shadow-md p-4 border border-slate-200;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
